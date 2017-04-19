@@ -93,7 +93,7 @@ $(document).ready(function(){
 
             this.behaviors.push(newBehavior);
             this.updateStatus();
-            
+
             //--------------------------------------------------------------------------------------
             // TODO: CHALLENGE 2
             // Implement the add behavior function. This function should:
@@ -172,6 +172,9 @@ $(document).ready(function(){
      */
     function displayNewBehavior (behavior)
     {
+        var item = $(behavior).getListItem();
+        $(item).append('.behavior-list');
+
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 3
         // Here you should use jquery to to add the correct behavior item div to the behavior-list
