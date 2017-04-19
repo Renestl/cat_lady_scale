@@ -159,6 +159,7 @@ $(document).ready(function(){
         // 4. Now add the behavior to the catLady object.
         //------------------------------------------------------------------------------------------
 
+        displayNewBehavior(behavior);
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 7
         // 5. Display the newly added behavior with the displayNewBehavior function.
@@ -177,8 +178,8 @@ $(document).ready(function(){
      */
     function displayNewBehavior (behavior)
     {
-        var item = $(behavior).getListItem();
-        $(item).append('.behavior-list');
+        var item = behavior.getListItem();
+        $(item).appendTo('.behavior-list');
 
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 3
