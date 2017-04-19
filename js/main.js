@@ -142,6 +142,7 @@ $(document).ready(function(){
         // 1. Prevent the default page reload using jquery.
         //------------------------------------------------------------------------------------------
 
+        var indexValue = $('#behavior-select').find(":selected").val();
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 5
         // 2. Grab the catLadyBehavior index value from the behavior option in the behavior-select
