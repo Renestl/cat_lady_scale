@@ -46,6 +46,15 @@ $(document).ready(function(){
         new Behavior("own more than one cat", 5),
         new Behavior("own more than one dog", -5),
         new Behavior("takes selfies with cats", 4),
+        new Behavior("goes without food to avoid waking the cat on your lap", 5),
+        new Behavior("allergic to cats, but have one anyway", 5),
+        new Behavior("ignore all humans to say hello to the cat", 4),
+        new Behavior("own more than one cat themed shirt", 1),
+        new Behavior("taught cat to fetch", 3),
+        new Behavior("avoids reddit because of all the cat gifs", -5),
+        new Behavior("allergic to cats", -2),
+        new Behavior("refuse to visit friends because they own a cat", -3),
+        new Behavior("refuse to spend entire paycheck on cat", -4),
         // -----------------------------------------------------------------------------------------
         // TODO: CHALLENGE 1
         // add some more behaviors cat lady behaviors here to customize your app!
