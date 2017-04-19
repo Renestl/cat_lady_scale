@@ -135,6 +135,8 @@ $(document).ready(function(){
      // (see individual challenges below)
      //---------------------------------------------------------------------------------------------
     $('#add-behavior').click(function(e){
+        
+        e.preventDefault();
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 4
         // 1. Prevent the default page reload using jquery.
