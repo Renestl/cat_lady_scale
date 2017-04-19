@@ -150,6 +150,8 @@ $(document).ready(function(){
         //    different options in dropdown and observe what happens to the html.
         //------------------------------------------------------------------------------------------
 
+        var behavior = catLadyBehaviors[indexValue];
+        catLady.addBehavior(behavior);
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 6
         // 3. Use the index value from step 2, to get the correct cat lady behavior from the
