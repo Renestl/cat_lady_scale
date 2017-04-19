@@ -90,6 +90,10 @@ $(document).ready(function(){
     var catLady = {
         behaviors: [],
         addBehavior : function (newBehavior) {
+
+            this.behaviors.push(newBehavior);
+            this.updateStatus();
+            
             //--------------------------------------------------------------------------------------
             // TODO: CHALLENGE 2
             // Implement the add behavior function. This function should:
