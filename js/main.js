@@ -177,6 +177,7 @@ $(document).ready(function(){
         // 5. Display the newly added behavior with the displayNewBehavior function.
         //------------------------------------------------------------------------------------------
 
+        displayStatus(catLadyStatus);
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 10
         // 1. Display the cat lady status, with the displayStatus function;
