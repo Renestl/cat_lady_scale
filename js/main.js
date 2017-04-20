@@ -119,6 +119,13 @@ $(document).ready(function(){
             //    on the scale.
             //--------------------------------------------------------------------------------------
 
+            if(sum >=  10) {
+                this.status = CAT_LADY_SCALE[10];
+            } else if (sum > 0) {
+                this.status = CAT_LADY_SCALE[sum];
+            } else {
+                this.status = CAT_LADY_SCALE[0];
+            }
             //--------------------------------------------------------------------------------------
             // TODO: CHALLENGE 9
             // Use the pointValue sum to determine where on the scale this cat lady is. Match the
