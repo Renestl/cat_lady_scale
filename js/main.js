@@ -105,6 +105,11 @@ $(document).ready(function(){
         },
         status: CAT_LADY_SCALE[5], // just the inital status... INDIFFERENT
         updateStatus: function () {
+            sum = 5;
+
+            for(var i = 0; i < this.behaviors.length; i++) {
+                sum += this.behaviors[i].pointValue;
+            }
             //--------------------------------------------------------------------------------------
             // TODO: CHALLENGE 8
             // Implement the evaluate function to calculate where on the scale this cat lady
