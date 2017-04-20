@@ -177,7 +177,7 @@ $(document).ready(function(){
         // 5. Display the newly added behavior with the displayNewBehavior function.
         //------------------------------------------------------------------------------------------
 
-        displayStatus(catLadyStatus);
+        displayStatus(catLady.status);
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 10
         // 1. Display the cat lady status, with the displayStatus function;
@@ -207,8 +207,10 @@ $(document).ready(function(){
      * Update Status Display
      * updates the cat lady status display in the html with the cat status object it was passed
      */
-    function displayStatus (catLadyStatus)
+    function displayStatus (status)
     {
+        $('.status-image img').attr('src', catLady.status.imagePath());
+        $('.status-title').html(catLady.status.title);
         //------------------------------------------------------------------------------------------
         // TODO: CHALLENGE 11
         // Here you should use jquery to to update the Cat Lady Status Display. To do this:
