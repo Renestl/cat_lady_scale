@@ -93,6 +93,7 @@ $(document).ready(function(){
 
             this.behaviors.push(newBehavior);
             this.updateStatus();
+            this.updateScale();
 
             //--------------------------------------------------------------------------------------
             // TODO: CHALLENGE 2
@@ -121,10 +122,13 @@ $(document).ready(function(){
 
             if(sum >=  10) {
                 this.status = CAT_LADY_SCALE[10];
+                this.scale = sum;
             } else if (sum > 0) {
                 this.status = CAT_LADY_SCALE[sum];
+                this.scale = sum;
             } else {
                 this.status = CAT_LADY_SCALE[0];
+                this.scale = sum;
             }
             //--------------------------------------------------------------------------------------
             // TODO: CHALLENGE 9
@@ -133,6 +137,24 @@ $(document).ready(function(){
             // corresponding scale position. And then update this catLady status property.
             //--------------------------------------------------------------------------------------
 
+        },
+        scale: this.status,
+        addScale: displayScale(),
+        updateScale: function() {
+            
+            if(this.scale >=10) {
+                $('.scale-button').removeClass('scale-button-active');
+                $('#10').addClass('scale-button-active');
+                $(`#10 + span`).css('font-weight', 'bold');
+            } else if(this.scale <= 0) {
+                $('.scale-button').removeClass('scale-button-active');
+                $('#0').addClass('scale-button-active');
+                $(`#0 + span`).css('font-weight', 'bold');
+            } else {
+                $('.scale-button').removeClass('scale-button-active');
+                $(`#${this.scale}`).addClass('scale-button-active');
+                $(`#${this.scale} + span`).css('font-weight', 'bold');
+            }
         },
     };
 
@@ -183,6 +205,7 @@ $(document).ready(function(){
         // 1. Display the cat lady status, with the displayStatus function;
         //------------------------------------------------------------------------------------------
 
+
     });
 
     /*
@@ -218,6 +241,19 @@ $(document).ready(function(){
         // 2. update the status title in the html
         // ** make sure to checkout the status object for help!
         //------------------------------------------------------------------------------------------
+    }
+
+    /*
+     * Display Results Scale
+     * updates the scale to reflect status
+    */
+    function displayScale() {
+        for(let s = 0; s < 11; s++) {
+            $(`<div class="scale-selection">
+                    <div id="${s}" class="scale-button" value="${s}"> </div>
+                    <span>${s}</span>
+                </div>`).appendTo('.scale-display');
+        }  
     }
 
     /*

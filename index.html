@@ -12,11 +12,11 @@
 
 <body>
     <div class='header'>
-        <div class="logo">
+        <div class="logo">  <!-- end logo -->
             <img width="100%" src="images/grumpy_cat.svg" />
         </div>
         <h1>The Cat Lady Scale</h1>
-    </div>
+    </div> <!-- end header -->
 
     <div class='content'>
         <div class="behavior-section">
@@ -32,7 +32,7 @@
                         <button id="add-behavior">Add</button>
                     </div>
                 </form>
-            </div>
+            </div>  <!-- end new-behavior-form -->
             <hr />
             <div class="behavior-list">
                 <!-- note: This is what a behavior item should look like...
@@ -41,19 +41,34 @@
                     <div class="points">+2</div>
                 </div>
                 -->
-            </div>
-        </div>
-        <div class="status-section">
-            <h2>Your Current Cat Lady Status:</h2>
-            <div class="status-display">
-                <div class="status-image">
-                    <img width="100%" src="images/cat_dog_friends.jpg" />
+            </div> <!-- end behavior-list -->
+        </div> <!-- end behavior-section -->
+        <div class="results-section">
+            <div class="status-section">
+                <h2>Your Current Cat Lady Status:</h2>
+                <div class="status-display">
+                    <div class="status-image">
+                        <img width="100%" src="images/cat_dog_friends.jpg" />
+                    </div> <!-- end status-image -->
+                    <div class="status-title">
+                        Indifferent
+                    </div> <!-- end status-title -->
+                </div> <!-- end status-display-->
+            </div> <!-- end status-section -->
+
+            <div class="scale-section">
+                <h2>Scale:</h2>
+                <div class="scale-display">
+                    <!-- <div class="scale-selection">
+                        <div id="${s}" class="scale-button" value="${s}"> </div>
+                        <span>${s}</span>
+                    </div>-->
                 </div>
-                <div class="status-title">
-                    Indifferent
-                </div>
-            </div>
-        </div>
+            </div> <!-- end scale-section -->
+        </div> <!-- end results-section -->
+
+    </div> <!-- end content -->
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
