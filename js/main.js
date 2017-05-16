@@ -156,6 +156,7 @@ $(document).ready(function(){
                 $(`#${this.scale} + span`).css('font-weight', 'bold');
             }
         },
+
     };
 
     /*
@@ -205,6 +206,7 @@ $(document).ready(function(){
         // 1. Display the cat lady status, with the displayStatus function;
         //------------------------------------------------------------------------------------------
 
+        displayHover(catLady.scale);
 
     });
 
@@ -247,13 +249,18 @@ $(document).ready(function(){
      * Display Results Scale
      * updates the scale to reflect status
     */
-    function displayScale() {
+    function displayScale(status) {
         for(let s = 0; s < 11; s++) {
-            $(`<div class="scale-selection">
+            $(`<div class="scale-selection tooltip">
                     <div id="${s}" class="scale-button" value="${s}"> </div>
                     <span>${s}</span>
+                    <span class="tooltiptext">Hello</span>
                 </div>`).appendTo('.scale-display');
         }  
+    }
+
+    function displayHover(scale) {
+        
     }
 
     /*
