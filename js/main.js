@@ -139,7 +139,6 @@ $(document).ready(function(){
 
         },
         scale: this.status,
-        addScale: displayScale(),
         updateScale: function() {
             
             if(this.scale >=10) {
@@ -206,8 +205,6 @@ $(document).ready(function(){
         // 1. Display the cat lady status, with the displayStatus function;
         //------------------------------------------------------------------------------------------
 
-        displayHover(catLady.scale);
-
     });
 
     /*
@@ -249,18 +246,24 @@ $(document).ready(function(){
      * Display Results Scale
      * updates the scale to reflect status
     */
-    function displayScale(status) {
+    function displayScale() {
         for(let s = 0; s < 11; s++) {
             $(`<div class="scale-selection tooltip">
                     <div id="${s}" class="scale-button" value="${s}"> </div>
                     <span>${s}</span>
-                    <span class="tooltiptext">Hello</span>
+                    <span class="tooltiptext"></span>
                 </div>`).appendTo('.scale-display');
         }  
     }
 
-    function displayHover(scale) {
-        
+    /*
+     * Display Scale Title on Hover
+    */
+    function displayScaleHover() {
+        for(var t = 0; t < 11; t++) {
+            var tip = CAT_LADY_SCALE[t].title;
+            $(`#${t} ~ .tooltiptext`).html(tip);
+        } 
     }
 
     /*
@@ -289,4 +292,6 @@ $(document).ready(function(){
     // initial setup
     fillBehaviorDropDown(); // fill drop down
     displayStatus(catLady.status); // display initial cat lady status
+    displayScale();
+    displayScaleHover();
 });
