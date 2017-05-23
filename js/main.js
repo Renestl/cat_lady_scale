@@ -275,8 +275,14 @@ $(document).ready(function(){
         for (var i = 0; i < catLadyBehaviors.length; i++) {
             var description = catLadyBehaviors[i].description;
             var points = catLadyBehaviors[i].pointValue;
-            var option = '<option value="' + i +'">' + description + '</option>';
-            $('#new-behavior-form .behaviors').append(option);
+            // var option = '<option value="' + i +'">' + description + '</option>';
+            // $('#new-behavior-form .behaviors').append(option);
+
+            var checked = `<div class="behavior-checkboxes">
+                <input type="checkbox" id=${i} name="behavior" value=${i}>
+                <label for=${i}><span>${description}</span></label>
+                </div>`
+            $('#new-behavior-form').append(checked);
         }
     }
 
@@ -285,8 +291,8 @@ $(document).ready(function(){
      * the current selected option, will have a select attribute associated with it.
      */
     $('body').on('change', 'select', function(){
-        $('option[selected]').removeAttr('selected');
-        $("option[value=" + this.value + "]").attr('selected', true);
+        // $('checked[selected]').removeAttr('selected');
+        // $("checked[value=" + this.value + "]").attr('selected', true);
     });
 
     // initial setup
