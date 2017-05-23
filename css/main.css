@@ -63,7 +63,9 @@ h1, h2, h3, h4, h5 {
 }
 
 #new-behavior-form > * {
-    display: block;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 
 fieldset {
@@ -73,13 +75,20 @@ legend {
     font-weight: bold;
 }
 
+.behavior-checkboxes {
+    border: 2px solid #454851;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5%;
+}
+
 input[type="checkbox"]:before{
     content: "";
     display: block;
     width: 13px;
     height: 13px;
     background: #fff;
-    border: 2px solid #31B9B9;
+    border: 2px solid #6AD0E5;
     border-radius: 25%;
 }
 input[type="checkbox"]:checked:before{
@@ -91,7 +100,7 @@ input[type="checkbox"]:checked:before{
     font-size: 20px;
     text-align: center;
     line-height: 0.5em;
-    color: #EB9D00;
+    color: #E1AD1E;
 }
 
 
@@ -182,10 +191,13 @@ input[type="checkbox"]:checked:before{
     color: #F26360;
     padding: 5px 0;
     text-align: center;
+    /*width: 100px;
+    height: 100px; */
+    /*z-index: 999;*/
 
     /* position tooltip text*/
     position: absolute;
-    bottom: 100px;
+    bottom: 35%;
     margin-left: -10px;
 
     /* fade in */

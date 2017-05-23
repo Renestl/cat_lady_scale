@@ -278,11 +278,11 @@ $(document).ready(function(){
             // var option = '<option value="' + i +'">' + description + '</option>';
             // $('#new-behavior-form .behaviors').append(option);
 
-            var checked = `<div class="behavior-checkboxes">
-                <input type="checkbox" id=${i} name="behavior" value=${i}>
-                <label for=${i}><span>${description}</span></label>
+            var checkedbox = `<div class="behavior-checkboxes">
+                <input type="checkbox" id="${description}" name="behavior" value="${i}">
+                <label for="${description}">${description}</label>
                 </div>`
-            $('#new-behavior-form').append(checked);
+            $('#new-behavior-form').append(checkedbox);
         }
     }
 
@@ -290,9 +290,14 @@ $(document).ready(function(){
      * Updates the selected options in the add behavior drop down
      * the current selected option, will have a select attribute associated with it.
      */
-    $('body').on('change', 'select', function(){
-        // $('checked[selected]').removeAttr('selected');
-        // $("checked[value=" + this.value + "]").attr('selected', true);
+    //  $('body').on('change', 'select', function(){
+    //     $('option[selected]').removeAttr('selected');
+    //     $("option[value=" + this.value + "]").attr('selected', true);
+    // });
+
+    $('body').on('change', ':checked', function() {
+            console.log('checked again ' + this.value);
+                
     });
 
     // initial setup
