@@ -279,8 +279,8 @@ $(document).ready(function(){
             // $('#new-behavior-form .behaviors').append(option);
 
             var checkedbox = `<div class="behavior-checkboxes">
-                <input type="checkbox" id="${description}" name="behavior" value="${i}">
-                <label for="${description}">${description}</label>
+                <input type="checkbox" id="checkbox-no-${i}" name="behavior" value="${i}">
+                <label for="checkbox-no-${i}">${description}</label>
                 </div>`
             $('#new-behavior-form').append(checkedbox);
         }
@@ -299,6 +299,7 @@ $(document).ready(function(){
             console.log('checked again ' + this.value);
                 
     });
+    
 
     // initial setup
     fillBehaviorDropDown(); // fill drop down
